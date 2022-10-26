@@ -8,28 +8,50 @@
     <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
-<main>    
     <header class ="header">
         <h1>Conta Bancária</h1>
-        <img src="bank.png" alt="logo do banco">
-    </header>
+        <img  id = imagem-header src="bank.png" alt="logo do banco">
+    </header>          
+    <main>    
+        <form class = "formulario">
+            
+            <fieldset id = formInterior>
+                <legend>Cadastro de Novos Clientes</legend>
+                <fieldset id = nomeCPF>
+                <label for = "nome"> Nome </label> <input type = "text" id = "nome" required placeholder="Nome Completo">      
+                <label for = "cpf"> CPF </label> <input type = "text" id = "cpf" required placeholder="xxx.xxx.xxx-xx">   
+                <label for = "celular"> Celular </label> <input type = "text" id = "celular" required placeholder="(xx) xxxxx-xxxx">      
+                </fieldset>
 
+                <fieldset id = senhaConfirma>
+                    <legend>Senha</legend>
+                    <input type="password" placeholder="Senha" id="password" required>
+                    <input type="password" placeholder="Confirme Senha" id="confirm_password" required>
+                </fieldset>
 
+                <fieldset id = finalizaApaga>
+                    <legend>Finalizar Cadastro</legend>
+                    <button type="submit" value="Enviar">Enviar</button>
+                    <button type="reset" value="Limpar">Limpar</button>
+                </fieldset>
 
+            </fieldset>
 
+        </form>
+        </main>
     <footer class = "footer">  
         <div class="redes-sociais">
             <h3>Redes Sociais</h3> 
             <ul>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Linkedin</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Linkedin</a></li>
             </ul>
         </div>
         <p>Pedro Lima - Todos os Direitos Reservados.</p> 
     </footer>
-</main>
+
 <script src = "script.js"></script>
 </body>
 </html>
