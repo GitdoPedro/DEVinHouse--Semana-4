@@ -17,7 +17,7 @@ const handleSubmit = (evento) => {
     evento.preventDefault()
     if(validarSenhasIguais(evento)){
         const conta = {
-            nome:    evento.target.nome.value,
+            nome:    evento.target.nome.value,  
             cpf:     evento.target.cpf.value,
             celular: evento.target.celular.value,
             senha:   evento.target.password.value,
