@@ -48,13 +48,20 @@ const trocarOperacao = (evento) => {
 
 }
 
+const obterConta = (conta) =>{
+    const contaCliente = contasClientes.find((c)=> c.conta === conta)
+    return contaCliente
+}
 const sacar = () => {}
 const depositar = () => {}
-const consultarSaldo = () => {}
+const consultarSaldo = (conta) => {
+    const contaCliente = obterConta(conta)
+    alert(`Saldo atual: ${contaCliente.saldo}`)
+}
 
 
 const validarConta = (conta,senha) =>{
-const contaCliente = contasClientes.find((c)=> c.conta === conta)
+    const contaCliente = obterConta(conta)
     
     if (contaCliente && contaCliente.senha === senha){
         return true
