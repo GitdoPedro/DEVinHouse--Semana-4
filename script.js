@@ -53,12 +53,32 @@ const obterConta = (conta) =>{
     return contaCliente
 }
 const sacar = () => {}
-const depositar = () => {}
+const depositar = (conta,valor) => {
+    if (validarValor(valor)){
+        const contaCliente = obterConta(conta)
+
+        contaCliente.saldo += valor
+        
+        console.log(contasClientes)
+
+        alert(`Deposito efetuado com sucesso! Saldo atual : ${contaCliente.saldo}`)
+
+
+    }else {
+        alert('Valor inválido')
+    }
+
+}
 const consultarSaldo = (conta) => {
     const contaCliente = obterConta(conta)
     alert(`Saldo atual: ${contaCliente.saldo}`)
 }
 
+const validarValor = (valor) => {
+    if (!isNaN(valor) && valor > 0){
+        return true
+    }
+}
 
 const validarConta = (conta,senha) =>{
     const contaCliente = obterConta(conta)
