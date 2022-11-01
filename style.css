@@ -1,13 +1,63 @@
-main {
-   
-    text-align: center;
-    width: 100%;
-    margin: 0px 0;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    color: var(--dark-gray)
 }
+
+body{
+    background-color: rgb(58, 52, 52);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+
+}
+
+#nome,#cpf,#celular,#password,#confirm_password{
+   color:rgb(10, 6, 6)
+}
+
+.button{
+    padding: 6px;
+    color : #000;
+    cursor: pointer;
+    transition: 0.3;
+}
+
+.button:hover{
+    opacity: 0.7;
+    
+}
+
 
 header{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    background-color:rgb(10, 6, 6);
+    
+}
+main {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    width: 100%;
+    margin: 0px 0;
+    
+}
+
+.formulario {
+    
+    padding: 20px 40px;
+    
+    
 }
 
 #imagem-header{
@@ -35,3 +85,9 @@ form label {
 
 }
 
+
+
+footer{
+    background-color: black;
+    padding: 10px;
+}

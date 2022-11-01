@@ -1,2 +1,11 @@
 # DEVinHouse--Semana-4
-Projeto de cadastro bancário do curso DEVinHouse , semana 4. (html+css+js)
+Olá Dev(a)! Parabéns, você acaba de ser contratado e seu projeto de onboard será o desenvolvimento de um sistema de conta bancária para pessoa física.
+
+Nessa primeira versão será contemplado:
+
+Cadastro de clientes
+Depósitos
+Saques
+Consulta de saldo
+Se divirta e qualquer dúvida/dificuldade fique a vontade para perguntar.
+
