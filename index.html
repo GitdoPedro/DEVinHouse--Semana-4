@@ -48,6 +48,31 @@
             </fieldset>
 
         </form>
+
+        <hr/>
+
+        <form id = "form-acoes">
+        <label for="operacao">Operação</label>
+            <select id = "operacao" required>
+                <option value = "SAQUE">Saque</option>
+                <option value = "DEPOSITO">Depósito</option>
+                <option value = "SALDO">Consulta Saldo</option>
+            </select>
+            <div>
+                <label for="valor">Valor:</label>
+                <input id="valor" type="number" required />
+            <div>
+                <label for="conta">Conta:</label>
+                <input id="conta" type="number" required />
+            </div>
+                <label for = "senha">Senha</label>
+                <input id = "senha" required/>
+            </div>
+            <button type="submit" id ="submit" class = "button" value="Enviar">Enviar</button>
+            <button type="reset"  id ="reset"  class = "button" value="Limpar">Limpar</button>
+
+        </form>
+        
         </main>
     <footer class = "footer">  
         <div class="redes-sociais">
