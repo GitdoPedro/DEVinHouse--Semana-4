@@ -52,7 +52,9 @@
         <hr/>
 
         <form id = "form-acoes">
-        <label for="operacao">Operação</label>
+            <fieldset id = "formConta">
+                <legend>Operação</legend>
+        
             <select id = "operacao" required>
                 <option value = "SAQUE">Saque</option>
                 <option value = "DEPOSITO">Depósito</option>
@@ -60,16 +62,16 @@
             </select>
             <div>
                 <label for="valor">Valor:</label>
-                <input id="valor" type="number" required />
+                <input id="valor" type="number" required value = '12345' />
             <div>
                 <label for="conta">Conta:</label>
-                <input id="conta" type="number" required />
+                <input id="conta" type="number" required value = '12345' />
             </div>
                 <label for = "senha">Senha</label>
-                <input id = "senha" required/>
+                <input id = "senha" required value = '12345' />
             </div>
-            <button type="submit" id ="submit" class = "button" value="Enviar">Enviar</button>
-            <button type="reset"  id ="reset"  class = "button" value="Limpar">Limpar</button>
+            <button type="submit" id ="submitConta" class = "button" value="Enviar">Enviar</button>
+            <button type="reset"  id ="resetConta"  class = "button" value="Limpar">Limpar</button>
 
         </form>
         

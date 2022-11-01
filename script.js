@@ -1,4 +1,4 @@
-let constasClientes = []
+let contasClientes = []
 
 
 const validarSenhasIguais = (evento) => {
@@ -20,12 +20,12 @@ const cadastrarConta = (evento) => {
             nome:    evento.target.nome.value,  
             cpf:     evento.target.cpf.value,
             celular: evento.target.celular.value,
-            senha:   evento.target.password.value,
+            senha:   evento.target.confirm_password.value,
             conta:   Math.floor(1000 + Math.random() * 90000),
             saldo:   0
-        };
+        }
 
-        constasClientes.push(conta)
+        contasClientes.push(conta)
         alert(`Conta Criada com sucesso! Número: ${conta.conta}`)
 
     }else {
@@ -38,16 +38,61 @@ form.addEventListener('submit',cadastrarConta)
 
 // Funções Operações
 
+
 const trocarOperacao = (evento) => {
     const valor = document.getElementById('valor')
     valor.disabled = evento.target.value === "SALDO"
+    console.log(contasClientes)
     
 
 
 }
 
+const sacar = () => {}
+const depositar = () => {}
+const consultarSaldo = () => {}
 
 
+const validarConta = (conta,senha) =>{
+const contaCliente = contasClientes.find((c)=> c.conta === conta)
+    
+    if (contaCliente && contaCliente.senha === senha){
+        return true
+    }
+        return false
+}
+
+const efetuarOperacao = (evento) => {
+    evento.preventDefault()
+    console.log(contasClientes)
+  
+    const conta = parseInt(evento.target.conta.value)
+    const senha = evento.target.senha.value
+    const valor = parseInt(evento.target.valor.value)
+  
+    const contaValida = validarConta(conta, senha)
+  
+    if (contaValida) {
+      switch (evento.target.operacao.value) {
+        case 'SAQUE':
+          sacar(conta, valor);
+          break
+        case 'DEPOSITO':
+          depositar(conta, valor)
+          break
+        case 'SALDO':
+          consultarSaldo(conta)
+          break
+        default:
+          alert('Operação inválida')
+      }
+    } else {
+      alert('Conta ou senha inválida')
+    }
+  }
 
 const operacao = document.getElementById('operacao')
 operacao.addEventListener('change',trocarOperacao)
+
+const formAcoes = document.getElementById('form-acoes')
+formAcoes.addEventListener('submit',efetuarOperacao)
