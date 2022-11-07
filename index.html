@@ -17,30 +17,30 @@
         <form class = "formulario" id ="form">
             
             <fieldset id = formInterior>
-                <legend>Cadastro de Novos Clientes</legend>
+                <legend><strong>Cadastro de Novos Clientes</strong></legend>
                 <fieldset id = nomeCPF>
                 <div>
-                    <label for = "nome"> Nome </label>
+                    <label for = "nome"> <strong>Nome</strong> </label>
                     <input type = "text" id = "nome" required placeholder="Nome Completo" value ="Pedro">
                 </div>      
                 <div>
-                    <label for = "cpf"> CPF </label>
+                    <label for = "cpf"> <strong>CPF</strong> </label>
                     <input type = "text" id = "cpf" required placeholder="xxx.xxx.xxx-xx" value = "11111111111">
                 </div>   
                 <div>
-                    <label for = "celular"> Celular </label>
+                    <label for = "celular"> <strong>Celular</strong> </label>
                     <input type = "tel" id = "celular"  required placeholder="(xx) xxxxx-xxxx" value = "219797067671">
                 </div>      
                 </fieldset>
 
                 <fieldset id = "senhaConfirma">
-                    <legend>Senha</legend>
+                    <legend><strong>Senha</strong></legend>
                     <input type="password" placeholder="Senha" id="password" required value="12345" >
                     <input type="password" placeholder="Confirme Senha" id="confirm_password" required value="12345">
                 </fieldset>
 
                 <fieldset id = "finalizaApaga">
-                    <legend>Finalizar Cadastro</legend>
+                    <legend><strong>Finalizar Cadastro</strong></legend>
                     <button type="submit" id ="submit" class = "button" value="Enviar">Enviar</button>
                     <button type="reset"  id ="reset"  class = "button" value="Limpar">Limpar</button>
                 </fieldset>
@@ -53,7 +53,7 @@
 
         <form id = "form-acoes">
             <fieldset id = "formConta">
-                <legend>Operação</legend>
+                <legend><strong>Operação</strong></legend>
         
             <select id = "operacao" required>
                 <option value = "SAQUE">Saque</option>
@@ -61,13 +61,13 @@
                 <option value = "SALDO">Consulta Saldo</option>
             </select>
             <div>
-                <label for="valor">Valor:</label>
+                <label for="valor"><strong>Valor:</strong></label>
                 <input id="valor" type="number" required value = '12345' />
             <div>
-                <label for="conta">Conta:</label>
+                <label for="conta"><strong>Conta:</strong></label>
                 <input id="conta" type="number" required value = '12345' />
             </div>
-                <label for = "senha">Senha</label>
+                <label for = "senha"><strong>Senha:</strong></label>
                 <input id = "senha" required value = '12345' />
             </div>
             <button type="submit" id ="submitConta" class = "button" value="Enviar">Enviar</button>
@@ -87,6 +87,8 @@
             </ul>
         </div>
         <p>Pedro Lima - Todos os Direitos Reservados.</p> 
+        
+        
     </footer>
 
 
